@@ -1,9 +1,9 @@
 <?php 
 
-$user = 'root';
-$password = 'root';
-$host = 'localhost:8888';
-$db = 'db_ajax';
+$user = `root`;
+$password = `root`;
+$host = `localhost`;
+$db = `cooperInfo`;
 
 $conn = mysqli_connect($host, $user, $password, $db);
 
