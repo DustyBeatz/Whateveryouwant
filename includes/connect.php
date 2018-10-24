@@ -2,7 +2,7 @@
 
 $user = 'root';
 $password = 'root';
-$host = 'localhost';
+$host = 'localhost:8888';
 $db = 'db_ajax';
 
 $conn = mysqli_connect($host, $user, $password, $db);
@@ -12,20 +12,9 @@ if(!$conn) {
     exit;
 }
 
-//echo "connected!";
+ 
 
-//Get all the car data
-// $myQuery = " SELECT * FROM mainmodel";
-// // make the query, get the result
-// $result = mysqil_query ($conn, $myQuery);
-
-// $rows = array();
-
-// while($row = mysqil_fetch_assoc($result)) {
-//     $rows [] = $row;
-// }
-
-if(isset($_GET["carModel"])) {
+if(isset($_GET["carModel"])) { //Check for paramters 
     $car = $_GET["carModel"];
 
     $myQuery = " SELECT * FROM mainmodel WHERE model = '$car'";
