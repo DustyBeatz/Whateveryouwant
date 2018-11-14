@@ -14,6 +14,21 @@ body {
 
 h1, h2, h3, h4, h5 { color:white; font-family:'MiniFont', arial, helvetica; }
 
+.preload-wrapper {
+	width: 100%;
+	position: absolute;
+	top :0;
+	bottom: 0;
+	text-align: center;
+	background-color: white;
+	border-radius: 3px;
+}
+
+.preloader {
+	max-width: 40%;
+	margin: 0 auto;
+}
+
 .topNav {
 	width: 100%;
 	position: fixed;

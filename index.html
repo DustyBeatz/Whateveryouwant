@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="css/foundation.css" />
     <link rel="stylesheet" href="css/overrides.css">
     <script src="js/vendor/modernizr.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.4.1/lottie.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+
   </head>
   <body>
   <!-- top nav -> not functional yet -->
@@ -51,12 +54,19 @@
       </div>
 
       <!-- model info block  -->
+<div class="preloader-wrapper">
+<div class="preloader"></div>
+
+</div>
+
 
       <!-- ==== POPULATE THESE ELEMENTS WITH THE QUERY RESULT === -->
+
+      <!-- Here sits the preloader we created in class-->
       <div class="small-6 columns modelInfo">
-          <h4 class="modelName">Model Name Here</h4>
-          <p class="priceInfo">Pricing here</p>
-          <p class="modelDetails">Model details here</p>
+          <h4 class="modelName">{{ modelname  }}</h4>
+          <p class="priceInfo">{{ modelpricing }}</p>
+          <p class="modelDetails">{{ modeldetails }}</p>
       </div>
     </div> <!-- end model info / thumbs -->
     <hr>

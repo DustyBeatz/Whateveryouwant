@@ -1,24 +1,42 @@
 (()=> {
 
-    const vm = new VTTCue({
+    const vm = new Vue({
 
         el : "#app",
+
+
         data: {
             modelname: "",
             modelpricing : "",
             modeldetails : ""
         },
-    })
+
     mounted : function() {
         console.log('mounted');
+        
+        this.addPreloader(document.querySelector('.modelInfo'));
 
         document.querySelector("#F55").click();
+
     },
 
     updated : function() {
         console.log('updated');
     },
     methods: {
+
+        addPreloader(parentEl){
+            parentEl.appendChild(docuemnt.querySelector('.preloader-wrapper'));
+
+            modymovin.loadAnimation({
+
+                wrapper : document.querySelector('.preloader'),
+                animType: 'svg',
+                loop : true,
+                path : './data/search.json'
+            });
+        },
+
     fetchData(e) {
 
         //gets the id of the elements via the events object
@@ -39,7 +57,7 @@
             console.error(error);
         });
     }
- }
+ },
 
     fetchData();
 })();
