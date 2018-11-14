@@ -8,7 +8,9 @@
         data: {
             modelname: "",
             modelpricing : "",
-            modeldetails : ""
+            modeldetails : "",
+
+            videosrc = "mini_1.mp4"
         },
 
     mounted : function() {
@@ -31,6 +33,22 @@
         }, 1000);
     },
     methods: {
+
+        volOn(e){
+
+            //catch the volOn event
+            console.log('moused over the video')
+
+            e.currentTarget.muted = false;
+        },
+
+        volOff(e){
+
+            //catch the volOff event
+            console.log('moused off the video')
+
+            e.currentTarget.muted = true;
+        },
 
         addPreloader(parentEl){
             parentEl.appendChild(docuemnt.querySelector('.preloader-wrapper'));

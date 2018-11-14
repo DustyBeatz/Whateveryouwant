@@ -190,6 +190,7 @@ video.responsive { width: 100%; }
 .vid-overlay i { font-size: 6em; margin-bottom: 10px; }
 
 .show-overlay { display: block; opacity: 1; }
+
 /* you may have to write more here - these are my simple fades, etc */
 
 .nonActive { opacity: 0.4; }
