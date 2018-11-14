@@ -22,6 +22,13 @@
 
     updated : function() {
         console.log('updated');
+
+        let preloader = document.querySelector('.preloader-wrapper');
+
+        setTimeout(function() {
+            preloader.classList.add('hidden');
+            document.body.appendChild('.preloader');
+        }, 1000);
     },
     methods: {
 
